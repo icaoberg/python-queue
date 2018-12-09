@@ -3,16 +3,19 @@ class Queue:
         self.elements = []
 
     def push(self, element):
-        raise NotImplementedError("Not implemented yet")
+        self.elements.append(element)
 
     def pop(self):
-        raise NotImplementedError("Not implemented yet")
+        return self.elements.pop(0)
 
     def peek(self):
-        raise NotImplementedError("Not implemented yet")
+        return self.elements[0]
 
     def isEmpty(self):
-        raise NotImplementedError("Not implemented yet")
+        if len(self.elements) == 0:
+            return True
+        else:
+            return False
 
     def size(self):
-        raise NotImplementedError("Not implemented yet")
+        return len(self.elements)
